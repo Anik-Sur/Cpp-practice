@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    while(t--)
+    {
+        int a,b,c,d,e;
+
+        cin >> a;
+        cin >> b;
+        cin >> c;
+        cin >> d;
+        cin >> e;
+
+        if (a+b <= d&&c<=e)
+        {
+             cout << "YES" << endl;
+        }
+        else if (a+c <= d&&b<=e)
+        {
+            cout << "YES" << endl;
+        }
+        else if (c+b <= d&&a<=e)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        cout << "NO" << endl;
+    }
+}
