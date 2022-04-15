@@ -6,13 +6,13 @@ vector<int> ds;
 
 void combinations(int i, int target, vector<int>& candidate, vector<vector<int>>& ans, vector<int>& ds){
 
-    if (i==sizeof(candidate)){
+    if (i == candidate.size()){
         if (target == 0){
             ans.push_back(ds);
         }
         return;
     }
-
+    
     if (candidate[i] <= target){
         ds.push_back(candidate[i]);
         combinations(i , target - candidate[i], candidate, ans, ds);
@@ -35,10 +35,11 @@ int main(){
         cin >> temp;
         candidate.push_back(temp);
     }
+    // cout << "SIZE " << candidate.size();
 
     combinations(0, target, candidate, ans, ds);
 
-    cout << endl << "==============" << endl;
+    cout << "==============" << endl;
     for (int i = 0; i < ans.size(); i++) {
         cout << "{";
         for (int j = 0; j < ans[i].size(); j++){
