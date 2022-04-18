@@ -23,8 +23,8 @@ int canConstruct(string word, vector<string>& wordbank){
 }
 
 int main(){
-    vector <string> wordbank = {"yo", "yoyoho", "ney", "ho", "yoho"};
-    string word= "yoyohoney";
+    vector <string> wordbank = {"eee", "eeeee", "eeeeeee", "eeeeeeeeeee", "e"};
+    string word= "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee";
     int fin = canConstruct(word, wordbank);
     cout << "NO OF WAYS: " << fin;
 }
