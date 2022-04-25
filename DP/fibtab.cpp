@@ -7,10 +7,12 @@ unsigned long long int fib (int n) {
 
     vector<unsigned long long int> table(n+1,0);
     table[1]=1;
-    for (int i=2; i<=n; i++){
-        // table[i+1] += table[i];
-        // table[i+2] += table[i];
-        table[i] = table[i-1] + table[i-2];
+    for (int i=0; i<=n; i++){
+        if(i+1<=n)
+        table[i+1] += table[i];
+        if(i+2<=n)
+        table[i+2] += table[i];
+        // table[i] = table[i-1] + table[i-2];
     }
     return table[n];
 }
