@@ -19,9 +19,8 @@ unsigned long long int fib (int n) {
 
 int main(){
     int n=0;
-    static map <int, unsigned long long int> memo;
     cout << "enter place of fibonnachi" << endl;
     cin >> n;
-    int ans = fib(n);
+    unsigned long long int ans = fib(n);
     cout << ans;
 }
